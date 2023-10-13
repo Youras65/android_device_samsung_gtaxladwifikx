@@ -1,3 +1,5 @@
+DEVICE_PATH := device/samsung/gtaxladwifikx
+
 # Architecture
 TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-a
@@ -16,7 +18,7 @@ ENABLE_CPUSETS := true
 ENABLE_SCHEDBOOST := true
 
 # For building with minimal manifest
-ALLOW_MISSING_DEPENDENCIES=true
+ALLOW_MISSING_DEPENDENCIES := true
 
 # Bootloader
 BOARD_VENDOR := samsung
@@ -24,7 +26,6 @@ TARGET_SOC := exynos7870
 TARGET_BOOTLOADER_BOARD_NAME := universal7870
 TARGET_NO_BOOTLOADER := true
 TARGET_NO_RADIOIMAGE := true
-TARGET_USES_UEFI := true
 
 # Kernel
 BOARD_KERNEL_BASE := 0x10000000
@@ -40,10 +41,6 @@ TARGET_BOARD_PLATFORM_GPU := mali-t830mp2
 BOARD_HAS_LARGE_FILESYSTEM := true
 TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
-
-# Workaround for error copying vendor files to recovery ramdisk
-BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
-TARGET_COPY_OUT_VENDOR := vendor
 
 # TWRP specific build flags
 RECOVERY_VARIANT := twrp
