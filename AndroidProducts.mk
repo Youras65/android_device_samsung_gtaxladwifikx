@@ -14,5 +14,5 @@
 # limitations under the License.
 #
 
-PRODUCT_MAKEFILES := $(LOCAL_DIR)/omni_j7xelte.mk
+PRODUCT_MAKEFILES := $(LOCAL_DIR)/omni_gtaxladwifikx.mk
 

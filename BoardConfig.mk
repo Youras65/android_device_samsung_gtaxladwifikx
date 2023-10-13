@@ -15,6 +15,7 @@ TARGET_2ND_CPU_VARIANT := cortex-a53
 ENABLE_CPUSETS := true
 ENABLE_SCHEDBOOST := true
 
+# For building with minimal manifest
 ALLOW_MISSING_DEPENDENCIES=true
 
 # Bootloader
@@ -28,8 +29,7 @@ TARGET_USES_UEFI := true
 # Kernel
 BOARD_KERNEL_BASE := 0x10000000
 BOARD_KERNEL_PAGESIZE := 2048
-TARGET_PREBUILT_KERNEL := device/samsung/j7xelte/prebuilt/Image
-
+TARGET_PREBUILT_KERNEL := device/samsung/gtaxladwifikx/prebuilt/kernel
 BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 --ramdisk_offset 0x01000000 --tags_offset 0x00000100 --dt device/samsung/j7xelte/prebuilt/dt.img --board SRPOL10A000RU
 
 # Platform
@@ -45,11 +45,6 @@ TARGET_USERIMAGES_USE_F2FS := true
 BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
 TARGET_COPY_OUT_VENDOR := vendor
 
-# Crypto
-TW_INCLUDE_CRYPTO := true
-TW_INCLUDE_CRYPTO_SAMSUNG := true
-TW_INCLUDE_FBE := true
-
 # TWRP specific build flags
 RECOVERY_VARIANT := twrp
 TW_THEME := portrait_hdpi
@@ -62,18 +57,10 @@ TW_DEFAULT_BRIGHTNESS := 153
 TW_NO_REBOOT_BOOTLOADER := true
 TW_HAS_DOWNLOAD_MODE := true
 TW_INCLUDE_NTFS_3G := true
-TW_EXCLUDE_SUPERSU := true
 TW_EXTRA_LANGUAGES := true
 TW_USE_NEW_MINADBD := true
 TW_USE_TOOLBOX := true
 TW_EXCLUDE_TWRPAPP := true
-TW_NO_LEGACY_PROPS := true
-BOARD_SUPPRESS_SECURE_ERASE := true
-PLATFORM_SECURITY_PATCH := 2069-04-20
+PLATFORM_SECURITY_PATCH := 2099-12-31
 PLATFORM_VERSION := 16.1.0
 LZMA_RAMDISK_TARGETS := recovery
-
-BOARD_CUSTOM_BOOTIMG_MK :=  device/samsung/j7xelte/bootimg.mk
-
-# SELinux Policies
-BOARD_SEPOLICY_DIRS := device/samsung/j7xelte/sepolicy
