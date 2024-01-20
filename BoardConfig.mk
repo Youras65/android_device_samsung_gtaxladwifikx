@@ -63,4 +63,5 @@ TW_EXCLUDE_TWRPAPP := true
 TW_USE_NEW_MINADBD := true
 LZMA_RAMDISK_TARGETS := recovery
 
+TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery/root/etc/recovery.fstab
 TARGET_COPY_OUT_VENDOR := vendor
